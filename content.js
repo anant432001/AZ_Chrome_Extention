@@ -10,7 +10,6 @@ saveButton.style.height = "40px";
 saveButton.style.width = "40px";
 saveButton.style.paddingTop = "10px";
 saveButton.style.paddingRight = "10px";
-// export {saveButton};
 // 
 // Creating a BookMark Button
 const bookMarkButton = document.createElement("img");
@@ -21,7 +20,6 @@ bookMarkButton.style.height = "40px";
 bookMarkButton.style.width = "40px";
 bookMarkButton.style.paddingTop = "10px";
 bookMarkButton.style.paddingRight = "10px";
-// export {bookMarkButton};
 // 
 
 window.addEventListener("load", async () => {
@@ -43,14 +41,12 @@ function addSaveButton(){
     parentElement = document.getElementsByClassName("list-inline text_white text-md-right")[0];
     parentElement.appendChild(saveButton);
 };
-// export {addSaveButton}; 
 
 function addBookMarkButton(){
     parentElement = document.getElementsByClassName("list-inline text_white text-md-right")[0];
     parentElement.appendChild(bookMarkButton);
     bookMarkButton.addEventListener("click", addNewBookMarkEventHandler);
 };
-// export {addBookMarkButton}; 
 
 const addNewBookMarkEventHandler = async () => {
     problemName = document.getElementsByClassName("col-8 my-auto")[0].childNodes[1].textContent;
@@ -70,7 +66,6 @@ const addNewBookMarkEventHandler = async () => {
     document.getElementsByClassName("list-inline text_white text-md-right")[0].lastChild.remove();
     addSaveButton();
 };
-// export {addNewBookMarkEventHandler};
 
 const fetchBookmarks = () => {
     return new Promise((resolve)=> {
