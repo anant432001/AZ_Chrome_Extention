@@ -63,9 +63,9 @@ const onDelete = async (e) => {
     "bookmark-" + bookmarkUrl.toString().split("-").at(-1)
   );
   bookmarkElementToDelete.parentNode.removeChild(bookmarkElementToDelete);
+  // document.getElementsByClassName("list-inline text_white text-md-right")[0].lastChild.remove();
   await removeFromMemory(bookmarkUrl);
   
-  document.getElementsByClassName("list-inline text_white text-md-right")[0].lastChild.remove();
   // addBookMarkButton();
 };
 
