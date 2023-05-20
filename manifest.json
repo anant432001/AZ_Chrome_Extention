@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "AZ ToDo Problems",
+  "version": "1.0.1",
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "AZ ToDo Problems"
+  },
+  "description": "Chrome Extension to add/delete AZ problems to a ToDo List. The ToDo List problems can be referred directly from the ToDo List.",
+  "author": "Anant Pandey",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.learning.algozenith.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "tabs"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/bookmark.png",
+        "assets/delete.png",
+        "assets/edit.png",
+        "assets/ext-icon.png",
+        "assets/play.png",
+        "assets/save.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
